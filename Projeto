@@ -1,0 +1,109 @@
+v  Opcao "Show warning on hotkey register error"
+v  Opcao "Enable plug-in"
+v  Opcao "Enable OSD"
+v  Tempo OSD
+v  Salvar no registro somente as teclas com erro, nao todas
+v  Auto disable/enable
+v  OSD Repeat/Shuffle Status
+v  Resume Play
+v  Verificar Number only
+v  OSD Safe mode (Directx gamers) Level 1/2
+v  Botao "Uninstall" proprio
+
+  Reescrever resume playback
+    * Verificar se a ultima musica é a mesma atual
+    * Nao resumir se for stream (ou dar play somente)
+  Playlist e skin per user
+  Janela com informacoes sobre as hotkeys atuais
+  Tracks to end
+  Hotkey ATOMS
+  Resume play auto saving
+  Time to end option
+  Nova janela de configuracao com as "abas"
+    Hotkeys
+      Lista
+    OSD
+    Configuration
+    Resume playback
+  Novo readme
+  Novo help
+  Controle avancado de volume
+  Posicao OSD
+  Modularizar o codigo
+
+
+  Bugs:
+v   Ctrl+UP nao funfa
+?   ```` Misterioso
+    Playback resume verificar se a musica é a mesma
+
+
+
+/*
+void ShowHK(int i) {
+
+  char buf[256];
+
+  wsprintf(buf, "%s\n\n%c,%x%x%x%x\n%c,%x%x%x%x",hotkeys[i].caption,
+                                                 (char)hotkeys[i].hk.vk,
+                                                 hotkeys[i].hk.modshift,
+                                                 hotkeys[i].hk.modcontrol,
+                                                 hotkeys[i].hk.modalt,
+                                                 hotkeys[i].hk.modwin,
+                                                 (char)cfghk[i].vk,
+                                                 cfghk[i].modshift,
+                                                 cfghk[i].modcontrol,
+                                                 cfghk[i].modalt,
+                                                 cfghk[i].modwin);
+  MessageBox(NULL,buf,"",MB_OK);
+
+}
+*/
+
+
+
+#define EQ_LOAD_PRESET     40172
+#define EQ_LOAD_DEFAULT    40177
+#define EQ_LOAD_EQF        40253
+
+#define PLAYLIST_ADD_DIR   1036
+#define PLAYLIST_ADD_URL   1039
+#define PLAYLIST_ADD_FILE  1032
+
+#define WINAMP_DIR_PLAY                 40187 // Abrir diretorio
+#define WINAMP_URL_PLAY                 40155 // Abrir URL
+#define WINAMP_CD_PLAY                  40323
+
+
+#define WINAMP_OPTIONS_BROWSER          40298
+#define WINAMP_OPTIONS_PLEDIT           40040 // toggles the playlist window
+#define WINAMP_FFWD5S                   40060 // fast forwards 5 seconds
+#define WINAMP_REW5S                    40061 // rewinds 5 seconds
+
+#define WINAMP_MODE_SHUFFLE  40023
+#define WINAMP_MODE_REPEAT   40022
+#define WINAMP_OPTIONS_PREFS            40012 // pops up the preferences
+
+
+#define IPC_GETPLAYLISTTITLE 212
+
+/* (requires Winamp 2.04+, only usable from plug-ins (not external apps))
+** char *name=SendMessage(hwnd_winamp,WM_WA_IPC,index,IPC_GETPLAYLISTTITLE);
+**
+** IPC_GETPLAYLISTTITLE gets the title of the playlist entry [index].
+** returns a pointer to it. returns NULL on error.
+*/
+
+
+#define IPC_GETLISTPOS 125
+
+/* (requires Winamp 2.05+)
+** int pos=SendMessage(hwnd_winamp,WM_WA_IPC,0,IPC_GETLISTPOS);
+**
+** IPC_GETLISTPOS returns the playlist position. A lot like IPC_WRITEPLAYLIST
+** only faster since it doesn't have to write out the list. Heh, silly me.
+*/
+
+Fechar winamp
+
+

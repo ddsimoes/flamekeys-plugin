@@ -1,0 +1,181 @@
+==============================================================================
+
+ Flamekeys plug-in v2.01
+
+==============================================================================
+
+
+
+1 - DESCRIPTION:
+
+       Flamekeys plugin is a add-on that activates hotkeys for several
+    functions on Winamp.
+       It's a full-configurable plug-in. You can change the hotkeys and
+    disable/enable all the implemented functions.
+       Also you can enable the plug-in OSD that provides feedback to commands
+    that don't open a window (Play, Pause, Next, Volume, etc).
+       It also have a "playback resume" feature which saves the song
+    position and when you restart Winamp the song are resumed.
+
+
+2 - HOW TO USE:
+
+       Install the plug-in and just press the keys to acess the functions you
+    want.
+
+       The default hotkeys are:
+
+       <CTRL>+<SHIFT>+
+
+          [1]       Previous
+          [2]       Play/Stop
+          [3]       Pause
+          [4]       Next
+          [5]       Open file(s)
+
+     NOTE:
+       The number keys here are those that are close to the letters, not
+    the numpad keys. Is "1", not "NUM 1".
+
+
+3 - HOW TO CONFIGURE:
+
+   3.1 - Opening configuration:
+
+     Open "Winamp preferences";
+     "Plugin/General Purpose";
+     Choose "Flamekeys plugin v2.0 [gen_fkeys.dll]";
+     Click "Configure".
+
+
+   3.2 - Valid hotkeys rules:
+
+      1 - You must combine modifiers (Control, Alt, Shift, Winkey) with any
+          another key;
+      2 - Shift modifier can only be used with other modifier;
+      3 - Function keys (F1, F2, etc.) can be used without modifiers or with
+          Shift only;
+      4 - Enter, Tab, Esc, Caps Lock, Num Lock, Print Screen, Pause/Break
+          cannot be used;
+
+
+   3.3 - Recommended hotkeys:
+
+      * Avoid to use only one modifier, unless it's the Winkey. This can cause conflict
+        with Windows and other applications.
+      * Try to not use function keys without modifiers.
+
+      These features are PERMITED but not RECOMMENDED.
+
+      Example:
+        If you choose Alt+F4, it's permited. But when you want to close you
+        window with this keys, the window will not close.
+
+
+   3.4 - Options:
+
+      * Show warning on hotkey register error
+
+          If the plug-in tries to register a key that are reserved or prior
+          registered by another application the plug-in can ignore it and
+          register the other keys or can show a warning window telling you
+          about the problem.
+
+
+      * Enable OSD
+
+          Show OSD window when you use no windowed functions.
+
+
+
+   3.5 - OSD:
+
+
+      * Display time (1/10s)
+
+          How long the OSD window will remain on the screen.
+
+
+      * Fadeout effect (Win2k/XP)
+
+          OSD "disapears" slowly instead of instant closing. Works only on
+          Windows 2000 and Windows XP.
+
+
+      * Prevent show in fullscreen
+
+          When you are working on fullscreen mode
+          (Media Player, games, etc) the OSD window won´t open.
+
+
+      * Prevent override topmost windows
+
+          If you are in a "topmost" window the OSD won´t be shown over this window.
+
+
+
+4 - VERSIONS:
+
+   (24/04/2002)
+   Version 2.01 - Bug fixes:
+
+      * Now [Modifier]+Up/Down works.
+      * Comestic fixes.
+      * Playback resume removed (coherence).
+
+
+   (01/01/2002)
+   Version 2.0 - New year: new name, new commands, new feature, new...
+
+      * New (real!) name "Flamekeys" in place of the old (un)name "Winamp hotkeys".
+      * More functions (28 now).
+      * OSD with full info about Winamp state, and the track you are playing.
+      * Playback Resume feature.
+      * Play/Stop acts as Play in paused state.
+      * Uninstall.
+      * And more...
+
+
+   (11/26/2001)
+   Version 1.1 - Several updates:
+
+      * Added keys: Space, PgUp, PgDown, Ins, Del, End, Home, End, Backspace.
+      * Now <Control> or <Alt> can be used alone.
+      * Function keys does not require modifiers.
+      * Added "Help" button.
+      * Added functions "Volume up", "Volume Down".
+      * "Play" and "Stop" are now only one key: "Play/Stop".
+      * Hotkeys are stored in the registry diferentily.
+      * Added a little trick that saves memory when Winamp start direct to tray.
+      * Navigate hotkeys easily just pressing UP and DOWN.
+      * Windows TAB navigation works correctly now.
+      * Esc cancel.
+      * Enter save.
+
+   (11/20/2001)
+   Version 1.01 - Bug fix:
+      * Corrected the bug wich certain keys (accents) were not loaded correctly from the
+        config.
+
+
+   (11/20/2001)
+   Version 1.0 - First release.
+
+
+
+5 - SOFTWARE UPDATES:
+
+    To get latest version of Flamekeys plug-in go to:
+
+      http://www.flamekeys.unsecurity.com.br/
+      http://ddsimoes.hpg.com.br/flamekeys/    (mirror 1)
+      http://ddsimoes.netfirms.com/            (mirror 2)
+
+
+6 - CONTACT:
+
+   Comments, questions, suggestions:
+
+      Daniel Simoes
+      ddsimoes@gmx.net
+
